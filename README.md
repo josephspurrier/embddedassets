@@ -1,8 +1,8 @@
 # How to Embed Assets in Go 1.16
 
-The original article is [here](https://www.josephspurrier.com/how-to-use-embedded-assets-in-go-1-16).
+The original article is [here](https://www.josephspurrier.com/how-to-embed-assets-in-go-1-16).
 
-In Go 1.16, there is now a way to [natively embed files and templates](https://golang.org/pkg/embed/) which allows us to now perform single binary deployments easily. A single binary deployment is beneficial because you can distribute a single file that contains both the compiled Go code as well as any static assets like HTML templates and CSS files. Prior, most people used third-party offerings like the [jteeuwen/gobindata](https://github.com/jteeuwen/go-bindata) library that provided similar functionality. 
+In Go 1.16, there is now a way to [natively embed files and templates](https://golang.org/pkg/embed/) which allows us to now perform single binary deployments easily. A single binary deployment is beneficial because you can easily distribute and replace a single file that contains both the compiled Go code as well as any static assets like HTML templates and CSS files. It's less effort to replace a single file than it is to replace an entire folder of assets. Prior, most people used third-party offerings like the [jteeuwen/gobindata](https://github.com/jteeuwen/go-bindata) library that provided similar functionality. 
 
 It doesn't require a lot of changes if you are already using static assets in your application so I'll walk how to migrate it over and what to watch out for. You can read the original proposal for embedding static assets [here](https://github.com/golang/go/issues/35950).
 
